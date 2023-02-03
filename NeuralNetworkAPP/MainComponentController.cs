@@ -13,14 +13,15 @@ namespace NeuralNetworkAPP
 
         public MainComponentController(MLContext mlContext)
         {
-            var projectDirectory = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, @"ваш путь к assets"));
+            //var projectDirectory = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, @"D:\Проекты\C#\САМЫЙ НОВЫЙ\DeepLearning_ImageClassification_Binary\DeepLearning_ImageClassification_Binary\"));
+            var projectDirectory = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, Environment.CurrentDirectory));
             var assetsRelativePath = Path.Combine(projectDirectory, "Assets");
 
             InitializePath(assetsRelativePath, mlContext);
 
             TrainTestData trainSplit = mlContext.Data.TrainTestSplit(data: PreProcessedData, testFraction: 0.3);
             TrainTestData validationTestSplit = mlContext.Data.TrainTestSplit(trainSplit.TestSet);
-
+            
             IDataView trainSet = trainSplit.TrainSet;
             IDataView validationSet = validationTestSplit.TrainSet;
 

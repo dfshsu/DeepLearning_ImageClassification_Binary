@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeepLearning_ImageClassification_Binary", "DeepLearning_ImageClassification_Binary\DeepLearning_ImageClassification_Binary.csproj", "{836D3AE5-6556-4573-BA24-2E6964621540}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeepLearning_ImageClassification_Binary", "DeepLearning_ImageClassification_Binary\DeepLearning_ImageClassification_Binary.csproj", "{836D3AE5-6556-4573-BA24-2E6964621540}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuralNetworkAPP", "NeuralNetworkAPP\NeuralNetworkAPP.csproj", "{824EDF64-3000-4CA4-8F87-864F9DB78572}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NeuralNetworkAPP", "NeuralNetworkAPP\NeuralNetworkAPP.csproj", "{824EDF64-3000-4CA4-8F87-864F9DB78572}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

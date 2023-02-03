@@ -27,4 +27,25 @@
     <ProjectReference Include="..\DeepLearning_ImageClassification_Binary\DeepLearning_ImageClassification_Binary.csproj" />
   </ItemGroup>
 
+  <!-- <ItemGroup>
+    <Content Update="..\Assets\**\*.*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup> -->
+
+    
+  <Target Name="CopyAssets" AfterTargets="Build">
+	  <ItemGroup>
+		  <AssetsCopy Include="$(ProjectDir)Assets\**" />
+          <CdCopy Include="$(ProjectDir)Assets\CD\**" />
+          <UdCopy Include="$(ProjectDir)Assets\UD\**" />
+          
+      </ItemGroup>
+    <Copy SourceFiles="@(AssetsCopy)" DestinationFolder="$(OutDir)Assets" />
+    <Copy SourceFiles="@(CdCopy)" DestinationFolder="$(OutDir)Assets/CD" />
+    <Copy SourceFiles="@(UdCopy)" DestinationFolder="$(OutDir)Assets/UD" />
+      
+  </Target>
+
+
 </Project>
